@@ -9,6 +9,7 @@ import { Home } from "./Components/Home";
 import { NewLog } from "./Components/NewLog";
 import { Logs } from "./Components/Logs";
 import { Log } from "./Components/Log";
+import { EditLog } from "./Components/EditLog";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/logs" element={<Logs logs={logs} />} />
           <Route path="/logs/new" element={<NewLog API={API}/>} />
           <Route path="/logs/:index" element={<Log API={API}/>}/>
+          <Route path="/logs/:index/edit" element={<EditLog API={API}/>}/>
         </Routes>
       </>
     </Router>
